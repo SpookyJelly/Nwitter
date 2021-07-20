@@ -68,10 +68,15 @@ const Profile = ({ refreshUser, userObj }) => {
           }}
         />
       </form>
-      <h3>작성한 트윗들</h3>
-      {myNweets ? (
+      <h3 style={{ fontWeight: "bold" }}>작성한 트윗들</h3>
+      <br></br>
+      {myNweets.length !== 0 ? (
         myNweets.map((Nweet) => {
-          return <ol key={Nweet.index}>{Nweet.text}</ol>;
+          return (
+            <ol key={Nweet.index} className="myNweetText">
+              {Nweet.text}
+            </ol>
+          );
         })
       ) : (
         <p>아직 아무런 트윗도 하지 않았어요</p>

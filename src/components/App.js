@@ -37,10 +37,6 @@ function App() {
             isLoggedIn={Boolean(userObj)}
             userObj={userObj}
           />
-          <div className="ocean">
-            <div className="wave"></div>
-            <div className="wave"></div>
-          </div>
         </>
       ) : (
         "Initializing..."
