@@ -54,7 +54,12 @@ const Nweet = ({ nweetObj, isOwner }) => {
         </>
       ) : (
         <>
-          <h4>{nweetObj.text}</h4>
+          <div className="nweetWrapper">
+            <h3>{nweetObj.text}</h3>
+            <p className="authorName">
+              작성자 : {nweetObj.userName ? nweetObj.userName : "익명"}
+            </p>
+          </div>
           {nweetObj.attachmentUrl && (
             <img src={nweetObj.attachmentUrl} alt="attach" />
           )}
